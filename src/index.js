@@ -14,7 +14,7 @@ const options = {
   playground: '/playground',
   cors: {
     credentials: false,
-    origin: ['http://localhost:5000'],
+    origin: [process.env.DEVELOPMENT_HOST, process.env.PRODUCTION_HOST],
   },
   static: 'public',
 };
