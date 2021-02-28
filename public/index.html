@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">         
+   <link rel="stylesheet" type="text/css" href="style.css">   
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <title>Pokédex</title>
+</head>
+<body>
+  <nav class="nav-wrapper">
+    <div class="container">
+      <a href="#" class="brand-logo" aria-disabled="true">
+        pokédex
+        <i class="material-icons">catching_pokemon</i>
+      </a>
+    </div>
+  </nav>
+
+
+  <div class= "container cards " id="main">
+
+    <div class="input-field col s12">
+      <form id="form" action="#">
+        <input id="search_input" type="text" class="validate" placeholder="Type your pokemon name here">
+      </form>
+    </div>
+    <div class="row main" id="fire"></div>
+  </div>
+  <div id="popUp" class="modal"></div>
+
+
+  <footer class="page-footer darken-1 footer ">
+    <div class="container">
+    © 2021 TAP Copyrights
+    </div>
+  </footer>
+
+ <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+}
+
+.cards {
+  margin-bottom: 50px;
+  text-align: center;
+}

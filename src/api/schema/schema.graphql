@@ -1,0 +1,52 @@
+# import Pokemons
+
+query GetPokemon {
+  repository(owner: "Jood80", name: "pokemon.json") {
+    pokemonData: object(expression: "HEAD:pokedex.json") {
+      ... on Blob {
+        text
+      }
+    }
+    pokemonImg: object(expression: "HEAD:images") {
+      ... on Tree {
+        entries {
+          name
+        }
+      }
+    }
+  }
+}
+
+type Query {
+  getPokemon: [Pokemon]!
+}
+
+type Pokemon {
+  pokemonData: [PokemonInfo]!
+  imagesData: [PokemonImg]!
+}
+
+type PokemonInfo {
+  id: Int
+  name: Name
+  type: [String]!
+  base: Base!
+}
+
+type PokemonImg {
+  name: String
+}
+
+type Name {
+  english: String
+  japanese: String
+  chinese: String
+  french: String!
+}
+
+type Base {
+  HP: Int
+  Attack: Int
+  Defense: Int
+  Speed: Int
+}
