@@ -41,7 +41,9 @@ const createCard = (pokemon) => {
 
 const getPokemon = async () => {
   try {
-    const res = await fetch('/api/pokemons');
+    const res = await fetch(
+      'https://pokemon-jade-two.vercel.app/api/pokemons',
+    );
     const pokemons = await res.json();
 
     if (pokemons) {
