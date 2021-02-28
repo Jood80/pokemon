@@ -41,7 +41,7 @@ const createCard = (pokemon) => {
 
 const getPokemon = async () => {
   try {
-    const res = await fetch(`${process.env.PRODUCTION_HOST}/api/pokemons`);
+    const res = await fetch('/api/pokemons');
     const pokemons = await res.json();
 
     if (pokemons) {
@@ -53,9 +53,7 @@ const getPokemon = async () => {
       e.preventDefault();
       const searchedPokemon = searchInput.value.toLowerCase();
 
-      const res = await fetch(
-        `${process.env.PRODUCTION_HOST}/api/pokemons/${searchedPokemon}`,
-      );
+      const res = await fetch(`/api/pokemons/${searchedPokemon}`);
 
       const pokemons = await res.json();
 
